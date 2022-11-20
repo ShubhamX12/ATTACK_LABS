@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cross site Scripting Demo</title>
+</head>
+<h1>
+<script>
+ function ss() 
+ {
+     var a=document.getElementById("2").value;
+     document.getElementById("1").innerHTML=a;
+ 
+ }
+  
+</script>
+<body>
+
+<h1>Cross site Scripting Demo</h1> 
+<p id="1">This first lab for cross site scripting</p>
+<input type="text" id="2" name="2"/>
+<input type="button" value="submit" onClick="ss()"/>
+</body>
+</html>
